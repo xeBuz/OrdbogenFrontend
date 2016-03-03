@@ -1,9 +1,5 @@
-node_modules
-dist
-.tmp
-.sass-cache
-app/components
-test/coverage
-test/e2e/evidence
-phantomjsdriver.log
-app/appConfig.js
+/node_modules
+/dist
+/.tmp
+/.sass-cache
+/bower_components
