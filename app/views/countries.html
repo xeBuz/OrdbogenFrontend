@@ -26,10 +26,14 @@
                             <td> </td>
                         </tr>
                     </tbody>
-
                 </table>
-            </div>
+                <button type="button" ng-click="prevPage()" class="btn" ng-if="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>  Prev
 
+                <button type="button" ng-click="nextPage()" class="btn pull-right" ng-if="next">
+                    Next <span class="glyphicon glyphicon-chevron-right"></span>
+                </button>
+            </div>
         </div>
     </div>
 </div>
