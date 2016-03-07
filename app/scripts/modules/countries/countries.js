@@ -8,12 +8,16 @@ angular
     .module('countries', [])
     .config(function ($routeProvider) {
         $routeProvider
-            .when('/countries', {
+            .when('/countries/', {
                 templateUrl: 'views/countries.html',
                 controller: 'countriesController'
             })
-            .when('/countries/:id', {
+            .when('/country/:code', {
                 templateUrl: 'views/country.html',
                 controller: 'countryController'
+            })
+            .when('/', {
+                templateUrl: 'views/search.html',
+                controller: 'countriesSearch'
             });
 });

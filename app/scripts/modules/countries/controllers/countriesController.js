@@ -12,7 +12,7 @@ angular.module('countries')
 
         var getCountries = function(page) {
 
-            API.get('countries',{},{page: page, count: 10}).then(function(data) {
+            API.get('countries',{}, {page: page, count: 10}).then(function(data) {
                 if (data.status.code === 200) {
                     $scope.countriesList = data.data;
                     $scope.totalItems = data.length;
@@ -23,14 +23,6 @@ angular.module('countries')
                 }
             },function() {
                 console.log("Error querying API Countries")
-            });
-        };
-
-        $scope.delete = function(id, index) {
-            popup.confirm('Are you sure you want to delete this Country?').result.then(function(){
-                API.delete('countries', {id: id}).then(function(data) {
-                    $scope.countriesList.splice(index,1);
-                });
             });
         };
 
