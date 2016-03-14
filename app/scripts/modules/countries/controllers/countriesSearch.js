@@ -11,7 +11,7 @@ angular.module('countries')
         $scope.countryName = "Denmark";
 
         var searchCountry = function(name) {
-
+            $scope.showSpinner = true;
             API.get('countries',{}, {name: name, count: 10}).then(function(data) {
                 if (data.status.code === 200) {
                     $scope.countriesList = data.data;
@@ -22,6 +22,7 @@ angular.module('countries')
             },function() {
                 console.log("Error querying API Countries")
             });
+            $scope.showSpinner = false;
         };
 
 

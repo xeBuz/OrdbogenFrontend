@@ -18,6 +18,7 @@ angular
     'ngTouch',
     'LocalStorageModule',
     'uiGmapgoogle-maps',
+    'angular-spinkit',
     'API',
     'countries',
   ])
