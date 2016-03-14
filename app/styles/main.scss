@@ -85,3 +85,31 @@ body {
 #seach-box {
   padding-bottom: 20px;
 }
+
+.table-countries {
+  thead tr th {
+    font-weight: bold;
+  }
+  .isocode {
+    width: 20%;
+  }
+  .name {
+    width: 70%;
+  }
+  .link {
+    width: 10%;
+  }
+}
+
+.country-detail {
+  .list-group-item strong {
+    width: 30%;
+    display: inline-block;
+  }
+}
+
+.angular-google-map-container {
+  height: 350px;
+  width: 100%;
+  padding-top: 10px;
+}

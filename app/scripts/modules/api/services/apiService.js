@@ -61,9 +61,11 @@ angular
         var http = function(url, method, data, params) {
             var deferred = $q.defer();
 
-            // if (!angular.isUndefined(data)) {
-            //     url = url.assign(data);
-            // }
+            if (!angular.isUndefined(data)) {
+                angular.forEach(data, function(key, value){
+                    url = url.replace('{'+value+'}', key);
+                })
+            }
 
             if (!angular.isUndefined(data)) {
                 data = $.param(data);

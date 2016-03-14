@@ -1,0 +1,77 @@
+<div class="page-header">
+  <h1>{{ country.short_name}} <br> <small>{{ country.formal_name }}</small></h1>
+</div>
+
+
+<div class="container-fluid country-detail">
+    <div class="row">
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Basic Information</h3>
+            </div>
+                <ul class="list-group">
+                    <li class="list-group-item"><strong>Name</strong> {{ country.short_name }}</li>
+                    <li class="list-group-item"><strong>Formal Name</strong> {{ country.formal_name }}</li>
+                    <li class="list-group-item"><strong>Government Type</strong> {{ country.government }}</li>
+                    <li class="list-group-item"><strong>Demonym</strong> {{ country.demonym }}</li>
+                    <li class="list-group-item"><strong>Currency</strong> {{ country.currency }}</li>
+
+                    <li class="list-group-item"><strong>ISO 3166-1 alpha-2</strong> {{ country.iso_code }}</li>
+                    <li class="list-group-item"><strong>ISO 3166-1 alpha-3</strong> {{ country.iso_code_long }}</li>
+
+                    <li class="list-group-item"><strong>Flag</strong>
+                        <img src="{{ country.flag }}"  class="img-responsive center-block" alt="{{ country.short_name }} flag">
+                    </li>
+                </ul>
+            </div>
+        <div>
+
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Population</h3>
+            </div>
+                <ul class="list-group">
+                    <li class="list-group-item"><strong>Population </strong>{{ country.population }}</li>
+                    <li class="list-group-item"><strong>Urban Population </strong>{{ country.population_urban }}</li>
+                    <li class="list-group-item"><strong>Birth Rate</strong>{{ country.birth }}%</li>
+                    <li class="list-group-item"><strong>Death Rate</strong>{{ country.death }}%</li>
+                </ul>
+            </div>
+        <div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Land</h3>
+            </div>
+                <ul class="list-group">
+                    <li class="list-group-item"><strong>Area </strong>{{ country.area }} km2</li>
+                    <li class="list-group-item"><strong>Land </strong>{{ country.land }} km2</li>
+                    <li class="list-group-item"><strong>Fertility </strong>{{ country.fertility }}%</li>
+                    <li class="list-group-item"><strong>Elevation</strong>{{ country.elevation || '0'}} meters</li>
+                    <li class="list-group-item"><strong>Elevation Low</strong>{{ country.elevation_low || '0' }} meters</li>
+                    <li class="list-group-item"><strong>Coordinates </strong>{{ country.coordinates }}
+                        <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
+                    </li>
+                </ul>
+            </div>
+        <div>
+
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Government Web Sites</h3>
+            </div>
+                <ul class="list-group">
+                    <li class="list-group-item"><strong>Official website</strong> <a href="http://{{ country.ITU }}">{{ country.ITU }}</a></li>
+                    <li class="list-group-item"><strong>Geographical Infromation</strong> <a href="http://{{ country.web }}">{{ country.web }}</a></li>
+                    <li class="list-group-item"><strong>National Statistics Office</strong> <a href="http://{{ country.GIS }}">{{ country.GIS }}</a></li>
+                    <li class="list-group-item"><strong>Post Office</strong> <a href="http://{{ country.statistics }}">{{ country.statistics }}</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+</div>

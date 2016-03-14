@@ -17,6 +17,7 @@ angular
     'ngSanitize',
     'ngTouch',
     'LocalStorageModule',
+    'uiGmapgoogle-maps',
     'API',
     'countries',
   ])

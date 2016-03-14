@@ -11,7 +11,6 @@ angular.module('countries')
         $scope.countryName = "Denmark";
 
         var searchCountry = function(name) {
-            console.log("searching")
 
             API.get('countries',{}, {name: name, count: 10}).then(function(data) {
                 if (data.status.code === 200) {
@@ -27,7 +26,6 @@ angular.module('countries')
 
 
         $scope.updatePage = function(){
-            console.log("updae");
             searchCountry($scope.countryName);
         };
 

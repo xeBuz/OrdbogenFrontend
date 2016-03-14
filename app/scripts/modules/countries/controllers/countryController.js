@@ -8,19 +8,18 @@ angular.module('countries')
     .controller('countryController', ['$scope', 'APIService', 'localStorageService', '$routeParams',
         function($scope, API, localStorageService, $routeParams)
         {
-
-        $scope.countryData = [];
+        $scope.country = [];
 
         var getCountry = function(code) {
-
-            API.get('country', {}, {}).then(function(data) {
+            var coord;
+            API.get('country', {code:code}, {}).then(function(data) {
                 if (data.status.code === 200) {
                     console.log(data);
-                    $scope.countryData = data.data;
-                    $scope.totalItems = data.length;
+                    coord = data.data.coordinates.split(",");
+                    $scope.map = { center: { latitude: coord[0], longitude: coord[1] }, zoom: 6 };
+                    $scope.country = data.data;
                 } else {
-                    console.log(data)
-                    console.log("Error getting Countries")
+                    console.log("Error getting Countries");
                 }
             },function() {
                 console.log("Error querying API Countries")
