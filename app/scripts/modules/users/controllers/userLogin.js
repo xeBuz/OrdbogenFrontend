@@ -16,11 +16,7 @@ angular.module('login')
             $scope.showSpinner = true;
 
             API.post('login', {email:user.email, password:user.password}, {}).then(function(data) {
-                console.log(data);
                 if (data.status.code === 200) {
-                    console.log("DONE");
-                    console.log(data.data.access_key);
-                    console.log(data.data.user);
                     API.setToken(data.data.access_key);
                     $scope.username = data.data.user.name;
                     $scope.alert = true;
@@ -35,8 +31,6 @@ angular.module('login')
         };
 
         $scope.submit = function() {
-            console.log("SUBMIT");
-            console.log($scope.user);
             loginUser($scope.user);
         }
 
