@@ -75,9 +75,6 @@ angular
                 Authorization: _token
             };
 
-            console.log(method)
-            console.log(headers);
-
             var req = {
                 method: method,
                 url: host+url,
@@ -86,13 +83,9 @@ angular
                 headers: headers
             };
 
-            console.log(req);
-
             $http(req).success(function(data, status, headers, config){
-                console.log('yep');
                 deferred.resolve(data, status, headers, config);
             }).error(function(data, status, headers, config){
-                console.log('nope');
                 deferred.resolve(data, status, headers, config);
             });
 
