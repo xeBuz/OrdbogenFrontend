@@ -19,9 +19,12 @@ angular.module('login')
                 if (data.status.code === 200) {
                     API.setToken(data.data.access_key);
                     $scope.username = data.data.user.name;
-                    $scope.alert = true;
+                    $scope.alertOK = true;
+                    $scope.alertError = false;
                 } else {
                     console.log("Error with User Authentication");
+                    $scope.alertError = true;
+                    $scope.alertOK = false;
                 }
             },function() {
                 console.log("Error querying API User")
@@ -35,5 +38,6 @@ angular.module('login')
         }
 
         $scope.showSpinner = false;
-        $scope.alert = false;
+        $scope.alertOK = false;
+        $scope.alertError = false;
 }]);
