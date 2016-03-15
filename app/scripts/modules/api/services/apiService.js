@@ -71,13 +71,12 @@ angular
                 data = $.param(data);
             }
 
-            // if(angular.isUndefined(_token) || !angular.isString(_token) || _token.isBlank()){
-            //     deferred.reject('Invalid Access Token');
-            // }
-
             var headers = {
                 Authorization: _token
             };
+
+            console.log(method)
+            console.log(headers);
 
             var req = {
                 method: method,
@@ -87,9 +86,13 @@ angular
                 headers: headers
             };
 
+            console.log(req);
+
             $http(req).success(function(data, status, headers, config){
+                console.log('yep');
                 deferred.resolve(data, status, headers, config);
             }).error(function(data, status, headers, config){
+                console.log('nope');
                 deferred.resolve(data, status, headers, config);
             });
 

@@ -18,7 +18,7 @@
                         <tr ng-repeat="item in countriesList">
                             <td class="isocode"> {{ item.iso_code }} </td>
                             <td class="name"> {{ item.short_name }}</td>
-                            <td class="link"> <a ng-href="#/country/{{ item.iso_code }}"> <span class="glyphicon glyphicon-globe"></span></a></td>
+                            <td class="link"> <a ng-href="#/country/code/{{ item.iso_code }}"> <span class="glyphicon glyphicon-globe"></span></a></td>
                             <!-- <td><a href="countries.html"></a></td> -->
                         </tr>
                     </tbody>

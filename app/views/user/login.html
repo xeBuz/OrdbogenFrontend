@@ -1,0 +1,37 @@
+<div class="page-header">
+  <h1>Login</h1>
+</div>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <form ng-submit="submit()" name="formLogin" class="form-horizontal">
+
+                <div class="form-group">
+                    <label for="email" class="col-sm-2 control-label">E-mail</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="email" ng-model="user.email" placeholder="admin@ordbogen.com" required="true" tabindex="1">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password" class="col-sm-2 control-label">Password</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="password" ng-model="user.password" placeholder="wordbook" required="true" tabindex="2">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-4">
+                        <button type="submit" class="btn btn-primary btn-lg" tabindex="25">Login</button>
+                        <circle-spinner ng-show="showSpinner"></circle-spinner>
+                    </div>
+                    <div class="col-sm-6">
+                        <div ng-show="alert" class="alert alert-success" role="alert">Welcome {{ username }}</div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

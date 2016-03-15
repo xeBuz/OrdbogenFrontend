@@ -14,4 +14,5 @@ angular
         country: '/countries/{code}',
         events: '/events/',
         event: '/events/{id}',
+        login: '/login/'
 });

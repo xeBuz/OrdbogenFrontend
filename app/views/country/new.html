@@ -1,0 +1,188 @@
+<div class="page-header">
+  <h1>Add a new Country</h1>
+</div>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <form ng-submit="submit()" name="formCountry" class="form-horizontal">
+<!--                 <div class="col-sm-4">
+                    <input type="text"  /><br />
+                    <gs-input type="text" fname="countryInfo" name="short_name" id="short_name" model="country.short_name" required="true" label="LABEL" tabindex="1"></gs-input>
+                </div>
+-->
+                <div class="form-group">
+                    <label for="short_name" class="col-sm-2 control-label">Name</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="short_name" ng-model="country.short_name" placeholder="Gondor" required="true" tabindex="1">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="formal_name" class="col-sm-2 control-label">Formal Name</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="formal_name" ng-model="country.formal_name" placeholder="Reunited Kingdom of Gondor and Arnor" required="true" tabindex="2">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="demonym" class="col-sm-2 control-label">Demonym</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="demonym" ng-model="country.demonym" placeholder="Gondorian" tabindex="3">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="iso_code" class="col-sm-2 control-label">ISO 3166-1 alpha-2</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="iso_code" ng-model="country.iso_code" placeholder="GO" required="true" tabindex="4">
+                    </div>
+
+                    <label for="iso_code_long" class="col-sm-2 control-label">ISO 3166-1 alpha-3</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="iso_code_long" ng-model="country.iso_code_long" placeholder="GON" required="true" tabindex="5">
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="continental_code" class="col-sm-2 control-label">Continental Code</label>
+                    <div class="col-sm-4">
+                        <!-- <input type="text" class="form-control" id="short_name" ng-model="country.continental_code" placeholder="" required="true" tabindex="1"> -->
+                        <select class="form-control" id="continental_code" ng-model="country.continental_code" tabindex="6" default=2 required="true" >
+                          <option value=2>Africa</option>
+                          <option value=19>America</option>
+                          <option value=142>Asia</option>
+                          <option value=150>Euroa</option>
+                          <option value=9>Oceania</option>
+                        </select>
+                    </div>
+
+                    <label for="country_code" class="col-sm-2 control-label">Country Code</label>
+                    <div class="col-sm-4">
+                        <input type="number" class="form-control" id="country_code" ng-model="country.country_code" placeholder="42" required="true" tabindex="7">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="elevation" class="col-sm-2 control-label">Elevation (High)</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="elevation" ng-model="country.elevation" placeholder="1200"  tabindex="8">
+                    </div>
+
+                    <label for="elevation_low" class="col-sm-2 control-label">Elevation (Low)</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="elevation_low" ng-model="country.elevation_low" placeholder="0"  tabindex="9">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="area" class="col-sm-2 control-label">Area</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="area" ng-model="country.area" placeholder="54422" tabindex="10">
+                    </div>
+
+                    <label for="land" class="col-sm-2 control-label">Land</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="land" ng-model="country.land" placeholder="51241" tabindex="11">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="fertility" class="col-sm-2 control-label">Fertility</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="fertility" ng-model="country.fertility" placeholder="46"  tabindex="12">
+                    </div>
+
+
+                    <label for="coordinates" class="col-sm-2 control-label">Coordinates</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="coordinates" ng-model="country.coordinates" placeholder="12.3,-32.2" tabindex="13">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="population" class="col-sm-2 control-label">Population</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="population" ng-model="country.population" placeholder="423151" tabindex="14">
+                    </div>
+
+                    <label for="population_urban" class="col-sm-2 control-label">Urban Population</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="population_urban" ng-model="country.population_urban" placeholder="62334" tabindex="15">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="birth" class="col-sm-2 control-label">Birth</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="birth" ng-model="country.birth" placeholder="" tabindex="16">
+                    </div>
+
+                    <label for="death" class="col-sm-2 control-label">Death</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="death" ng-model="country.death" placeholder="" tabindex="17">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="itu" class="col-sm-2 control-label">ITU</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="itu" ng-model="country.itu" placeholder="" tabindex="18">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="web" class="col-sm-2 control-label">Web</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="web" ng-model="country.web" placeholder="" tabindex="19">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="gis" class="col-sm-2 control-label">GIS</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="gis" ng-model="country.gis" placeholder="" tabindex="20">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="statistics" class="col-sm-2 control-label">Statistics</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="statistics" ng-model="country.statistics" placeholder="" tabindex="21">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="flag" class="col-sm-2 control-label">Flag</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="flag" ng-model="country.flag" placeholder="http://vignette1.wikia.nocookie.net/cybernations/images/3/3a/GondorFlag.png" required="true" tabindex="22">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="government" class="col-sm-2 control-label">Government</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="government" ng-model="country.government" placeholder=""  tabindex="23">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="currency" class="col-sm-2 control-label">Currency</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="currency" ng-model="country.currency" placeholder="" tabindex="24">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-offset-6 col-sm-6">
+                        <button type="submit" class="btn btn-primary btn-lg" tabindex="25">Create</button>
+                        <circle-spinner ng-show="showSpinner"></circle-spinner>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
